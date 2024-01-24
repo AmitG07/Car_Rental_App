@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\Car Rent App",
+    "\\Car Rent App\\BusinessLayer\\Interface",
+    "\\Car Rent App\\BusinessObjectLayer\\bin\\Debug",
+    "\\Car Rent App\\Car Rent App",
+    "\\Car Rent App\\Car Rent App\\Controllers",
+    "\\Car Rent App\\Car Rent App\\Helper",
+    "\\Car Rent App\\Car Rent App\\Models",
+    "\\Car Rent App\\DataAccessLayer",
+    "\\Car Rent App\\DataAccessLayer\\Interface"
+  ],
+  "SelectedNode": "\\Car Rent App\\DataAccessLayer\\DataSeeder.cs",
+  "PreviewInSolutionExplorer": false
+}
