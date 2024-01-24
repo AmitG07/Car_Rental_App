@@ -1,0 +1,31 @@
+/* Responsive styles for images */
+img {
+    max-width: 150px;
+    height: auto;
+}
+
+/* Responsive styles for table */
+@media (max-width: 768px) {
+    .table {
+        width: 100%;
+        margin-bottom: 1rem;
+        background-color: transparent;
+    }
+
+    .table th,
+    .table td {
+        padding: 0.75rem;
+        text-align: center;
+    }
+}
+
+@media (max-width: 576px) {
+    img {
+        max-width: 80px;
+    }
+
+    .table th,
+    .table td {
+        padding: 0.5rem;
+    }
+}

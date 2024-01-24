@@ -1,0 +1,37 @@
+<div class="main">
+    <div class="form-container">
+        <div class="col-md-6 offset-md-3">
+            <h2 class="text-center mt-2">Add Cars</h2>
+            <form [formGroup]="manageCarsform" #form="ngForm" (ngSubmit)="manageCars()">
+                <div class="form-group mt-2">
+                    <label for="VehicleId">Vehicle Id</label>
+                    <input type="text" class="form-control mt-2" formControlName="VehicleId"
+                        placeholder="Enter Vehicle Id">
+                </div>
+                <div class="form-group mt-2">
+                    <label for="Brand">Brand</label>
+                    <input type="text" class="form-control mt-2" formControlName="Brand"
+                        placeholder="Enter Car's Brand">
+                </div>
+                <div class="form-group mt-2">
+                    <label for="Model">Model</label>
+                    <input type="text" class="form-control mt-2" formControlName="Model"
+                        placeholder="Enter Car's Model">
+                </div>
+                <div class="form-group mt-2">
+                    <label for="RentalPrice">Rental Price</label>
+                    <input type="number" class="form-control mt-2" formControlName="RentalPrice"
+                        placeholder="Enter Car's Price">
+                </div>
+                <div class="form-group mt-2">
+                    <label for="Image">Image</label>
+                    <input type="text" class="form-control mt-2" formControlName="Image"
+                        placeholder="Enter Image URL">
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary mt-3">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

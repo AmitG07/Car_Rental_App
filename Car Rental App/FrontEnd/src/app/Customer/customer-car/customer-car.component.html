@@ -1,0 +1,56 @@
+<div class="action">
+  <!-- Form for filtering data -->
+  <form (ngSubmit)="filterData()" class="my-4">
+    <div class="row">
+      <div class="col">
+        <label for="brand">Brand:</label>
+        <input type="text" id="brand" name="brand" placeholder="Brand" [(ngModel)]="brandFilter" class="form-control">
+      </div>
+      <div class="col">
+        <label for="model">Model:</label>
+        <input type="text" id="model" name="model" placeholder="Model" [(ngModel)]="modelFilter" class="form-control">
+      </div>
+      <div class="col">
+        <label for="price">Price (max):</label>
+        <input type="number" id="price" name="price" placeholder="Price(max)" [(ngModel)]="priceFilter"
+          class="form-control">
+      </div>
+    </div>
+    <div class="col mt-2">
+      <button type="submit" class="btn btn-danger">Apply</button>
+    </div>
+  </form>
+
+  <!-- Car list -->
+  <div class="car-list col-md-8 mx-auto my-4">
+    <h2 class="text-center">List Of Cars</h2>
+    <table class="table table-striped">
+      <!-- Table headers -->
+      <thead>
+        <tr>
+          <th>Image</th>
+          <th>Vehicle Id</th>
+          <th>Brand</th>
+          <th>Model</th>
+          <th>Rental Price</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Car data rows -->
+        <tr *ngFor="let car of Cars">
+          <td><img src="{{car.image}}" alt="not found"></td>
+          <td>{{ car.vehicleId }}</td>
+          <td>{{ car.brand }}</td>
+          <td>{{ car.model }}</td>
+          <td>{{ car.rentalPrice }}</td>
+          <td>
+            <a [routerLink]="['/customer/customer-view', car.carId]" class="btn btn-info text-light">
+              View Details
+            </a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

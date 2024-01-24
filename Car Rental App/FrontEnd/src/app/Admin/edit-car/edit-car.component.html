@@ -1,0 +1,39 @@
+<div class="main">
+    <div class="form-container">
+        <div class="col-md-6 offset-md-3">
+            <h2 class="text-center mt-2">Edit Car Details</h2>
+            <form [formGroup]="EditCarForm" #form="ngForm" (ngSubmit)="EditCarDetail()">
+                <div class="form-group mt-2">
+                    <label for="VehicleId">Vehicle Id</label>
+                    <input type="text" class="form-control mt-2" formControlName="VehicleId"
+                        placeholder="Enter Vehicle Id">
+                </div>
+                <div class="form-group mt-2">
+                    <label for="Brand">Brand</label>
+                    <input type="text" class="form-control mt-2" formControlName="Brand"
+                        placeholder="Enter Car's Brand">
+                </div>
+                <div class="form-group mt-2">
+                    <label for="Model">Model</label>
+                    <input type="text" class="form-control mt-2" formControlName="Model"
+                        placeholder="Enter Car's Model">
+                </div>
+                <div class="form-group mt-2">
+                    <label for="RentalPrice">Rental Price</label>
+                    <input type="number" class="form-control mt-2" formControlName="RentalPrice"
+                        placeholder="Enter Car's Price">
+                </div>
+                <div class="form-group mt-2">
+                    <label for="IsAvailable">Is Available</label>
+                    <select class="form-control" formControlName="IsAvailable">
+                        <option value="true">Available</option>
+                        <option value="false">Not Available</option>
+                    </select>
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary mt-3">Update</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

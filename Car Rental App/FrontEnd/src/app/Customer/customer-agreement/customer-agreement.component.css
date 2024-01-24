@@ -1,0 +1,30 @@
+/* Responsive styles */
+@media (max-width: 768px) {
+    .container {
+      overflow-x: auto; /* Allow horizontal scrolling for smaller screens */
+    }
+  
+    table {
+      width: 100%;
+      overflow: auto; /* Enable horizontal scrolling within the table */
+    }
+  
+    th, td {
+      min-width: 150px; /* Minimum width for table cells */
+    }
+  
+    .btn {
+      font-size: 14px; /* Adjust button font size for smaller screens */
+    }
+  }
+  
+  @media (max-width: 576px) {
+    th, td {
+      min-width: 100px; /* Further reduce minimum width for smaller screens */
+    }
+  
+    .btn {
+      font-size: 12px; /* Reduce button font size for even smaller screens */
+    }
+  }
+  

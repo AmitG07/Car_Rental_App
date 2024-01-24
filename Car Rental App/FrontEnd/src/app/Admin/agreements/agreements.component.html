@@ -1,0 +1,33 @@
+<div class="container mt-4">
+  <h2 class="mb-4">Rental Agreements</h2>
+  <div class="table-responsive">
+    <table class="table table-bordered table-striped">
+      <thead>
+        <tr>
+          <th>User Id</th>
+          <th>Start Date</th>
+          <th>End Date</th>
+          <th>Rental Price</th>
+          <th>Availibility Status</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let agreement of agreementData">
+          <td>{{agreement.userId}}</td>
+          <td>{{startDateValue}}</td>
+          <td>{{endDateValue}}</td>
+          <td>{{agreement.rentedPrice}}</td>
+          <td *ngIf="isAvailable">In Stock</td>
+          <td *ngIf="isAvailable==false">Out of Stock</td>
+          <td>
+            <button class="btn btn-info mb-1 mx-1" routerLink="/edit/{{agreement.rentId}}">Edit</button>
+            <button class="btn btn-danger mb-1" (click)="onClickDelete(agreement.rentId)">Delete</button>
+            <button class="btn btn-warning mb-1 mx-1" (click)="onReturn(agreement.rentId)"
+              *ngIf="agreement.returnRequest">Return</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -1,0 +1,37 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-7" *ngIf="Cars">
+      <div class="container text-center actions">
+        <h1 class="display-4">List Of Cars</h1>
+        <p class="lead">Admin can view cars, edit cars & delete car.</p>
+      </div>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Image</th>
+            <th>Vehicle Id</th>
+            <th>Brand</th>
+            <th>Model</th>
+            <th>Rental Price</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Loop through the list of cars and display each car in a table row -->
+          <tr *ngFor="let car of Cars">
+            <td><img routerLink="details/{{car.carId}}" src="{{car.image}}" alt="not found"></td>
+            <td>{{ car.vehicleId }}</td>
+            <td>{{ car.brand }}</td>
+            <td>{{ car.model }}</td>
+            <td>{{ car.rentalPrice }}</td>
+            <td>
+              <button (click)="onClickDelete(car.carId)" class="btn btn-danger">
+                Delete
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

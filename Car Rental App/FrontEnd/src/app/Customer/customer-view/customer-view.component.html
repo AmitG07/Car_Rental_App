@@ -1,0 +1,30 @@
+<div class="container" *ngIf="viewDetails">
+  <h2 class="text-center mt-3">Car Details</h2>
+  <div class="card mx-auto my-5" style="max-width: 24rem;">
+    <div class="card-header">
+      <h4 class="text-center"><strong>Vehicle Id: </strong>{{ viewDetails.vehicleId }}</h4>
+    </div>
+    <div class="card-body">
+      <div class="row">
+        <div class="col-lg-6">
+          <ul class="list-group">
+            <li class="list-group-item"><strong>Brand:</strong> {{ viewDetails.brand }}</li>
+            <li class="list-group-item"><strong>Model:</strong> {{ viewDetails.model }}</li>
+            <li class="list-group-item"><strong>Rental Price:</strong> {{ viewDetails.rentalPrice }}</li>
+            <li class="list-group-item"><strong>Is Available:</strong>
+              {{ isCarAvailable ? 'In Stock' : 'Out Of Stock' }}
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-6 text-center mt-3">
+          <button class="btn btn-info" [routerLink]="'/customer/customer-rental'"
+            [queryParams]="{ rentalPrice: viewDetails.rentalPrice, carId: viewDetails.carId }" *ngIf="isCarAvailable">
+            Rent The Car
+          </button>
+          <!-- Back Button -->
+          <button class="btn btn-secondary m-2" (click)="goBack()">Back</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

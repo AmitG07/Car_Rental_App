@@ -1,0 +1,72 @@
+<div class="container mt-2">
+    <div class="row">
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container text-center" *ngIf="customerName == null">
+                <h1 class="display-4">Welcome To Car Rental </h1>
+                <p class="lead">People can buy cars on rental basis.</p>
+            </div>
+
+            <div class="container text-center actions" *ngIf="role && customerName">
+                <h1 class="display-4">Welcome To Admin Portal </h1>
+                <p class="lead">Admin can manage cars, customers, rentals, and returns.</p>
+            </div>
+
+            <div class="container text-center actions" *ngIf="!role && customerName">
+                <h1 class="display-4">Welcome To Customer Portal </h1>
+                <p class="lead">Customer can view cars, customers, rentals, and returns.</p>
+            </div>
+        </div>
+    </div>
+    <div class="row mt-3">
+        <div class="col-lg-3 col-md-6">
+            <div class="text-center">
+                <img src="assets/images/wrangler.jpg" alt="Car Image">
+                <h6>Jeep Wrangler</h6>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+            <div class="text-center">
+                <img src="assets/images/fpace.png" alt="Car Image">
+                <h6>Jaguar F-Pace</h6>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+            <div class="text-center">
+                <img src="assets/images/swift.png" alt="Car Image">
+                <h6>Maruti Swift</h6>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+            <div class="text-center">
+                <img src="assets/images/thar.png" alt="Car Image">
+                <h6>Mahindra Thar</h6>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-3 col-md-6">
+            <div class="text-center">
+                <img src="assets/images/urus.png" alt="Car Image">
+                <h6>Lamborghini Urus</h6>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+            <div class="text-center">
+                <img src="assets/images/fortuner.png" alt="Car Image">
+                <h6>Toyota Fortuner</h6>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+            <div class="text-center">
+                <img src="assets/images/x3.png" alt="Car Image">
+                <h6>BMW X3</h6>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+            <div class="text-center">
+                <img src="assets/images/e300.png" alt="Car Image">
+                <h6>Mercedes E300</h6>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,42 @@
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  font-weight: bold;
+}
+
+img{
+  width: 150px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .col {
+    flex-basis: 100%;
+    margin-bottom: 10px;
+  }
+
+  .action {
+    padding: 0 10px;
+  }
+
+  img {
+    max-width: 80px;
+  }
+}
+
+@media (max-width: 576px) {
+  .col {
+    flex-basis: 100%;
+    margin-bottom: 10px;
+  }
+
+  .action {
+    padding: 0 10px;
+  }
+
+  img {
+    max-width: 60px;
+  }
+}

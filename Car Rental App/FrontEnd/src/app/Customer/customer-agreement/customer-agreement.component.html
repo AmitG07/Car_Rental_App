@@ -1,0 +1,39 @@
+<div class="container">
+    <!-- List of Agreements -->
+    <h4 class="text-center mt-4">Agreements</h4>
+    <div class="table-responsive">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Car ID</th>
+                    <th>Start Date</th>
+                    <th>End Date</th>
+                    <th>Rental Price</th>
+                    <th>Availability Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let agreement of Agreements">
+                    <!-- Agreement data columns -->
+                    <td>{{ agreement.carId }}</td>
+                    <td>{{ agreement.startDate | date: 'yyyy-MM-dd' }}</td>
+                    <td>{{ agreement.endDate | date: 'yyyy-MM-dd' }}</td>
+                    <td>{{ agreement.rentedPrice }}</td>
+                    <td *ngIf="agreement.isAvailable">In Stock</td>
+                    <td *ngIf="!agreement.isAvailable">Out of Stock</td>
+                    <td>
+                        <!-- Action buttons -->
+                        <div class="d-flex flex-wrap justify-content-center">
+                            <button class="btn btn-primary mb-1" (click)="onAccept(agreement.rentId)" *ngIf="agreement.isAccepted==0">Accept</button>
+                            <a class="btn btn-warning mb-1 mx-1" [routerLink]="'/edit/' + agreement.rentId">Edit</a>
+                            <button class="btn btn-danger mb-1" (click)="onClickDelete(agreement.rentId)">Delete</button>
+                            <button class="btn btn-info mb-1 mx-1" (click)="onRequestReturn(agreement.rentId)" *ngIf="agreement.isAccepted">Return</button>
+                            <p class="text-success mb-0 mx-1" *ngIf="agreement.isAccepted">Accepted</p>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,41 @@
+/* CSS for aligning action buttons in a horizontal line */
+.action-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .table-responsive {
+      width: 100%;
+      overflow-x: auto;
+      margin-bottom: 15px;
+    }
+  
+    .table {
+      width: 100%;
+    }
+  
+    .action-buttons {
+      flex-direction: row; /* Align buttons in a horizontal line */
+    }
+  
+    .btn {
+      margin: 5px;
+    }
+  
+    .btn {
+      font-size: 14px;
+      padding: 10px 20px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .btn {
+      font-size: 12px;
+      padding: 8px 12px;
+    }
+  }
+  
